@@ -1,0 +1,20 @@
+version: '3.9'
+services: 
+  redis:
+    image: redis:6.2.1
+    ports:
+      - 6379:6379
+  edge:
+    build: ./edge
+    ports: 
+      - 8001:8000
+    environment: 
+      - BACKEND_URI=ws://localhost:8001
+      - REDIS_URI=redis://redis:6379
+  edge_2:
+    build: ./edge
+    ports: 
+      - 8002:8000
+    environment: 
+      - BACKEND_URI=ws://localhost:8002
+      - REDIS_URI=redis://redis:6379
