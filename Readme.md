@@ -8,12 +8,12 @@ Multiple redis instances?
 ```
 redis
 +-(pubsub)- edge
-		+-(websocket)- client
-		+-(websocket)- client
-		[...]
+    +-(websocket)- client
+    +-(websocket)- client
+    [...]
 +-(pubsub)- edge
-		+-(websocket)- client
-		[...]
+    +-(websocket)- client
+    [...]
 [...]
 ```
 
