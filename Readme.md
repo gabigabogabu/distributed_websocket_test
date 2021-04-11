@@ -5,6 +5,7 @@ Multiple redis instances?
 
 ## Architecture
 
+```
 redis
 +-(pubsub)- edge
 		+-(websocket)- client
@@ -14,6 +15,7 @@ redis
 		+-(websocket)- client
 		[...]
 [...]
+```
 
 - Edges talk to redis with pub/sub
 - Browsers talk to edges with wesockets
